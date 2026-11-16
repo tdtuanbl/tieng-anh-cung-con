@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Động Vật Dưới Nước</title>
+  <link rel="stylesheet" href="../../shared/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="top-nav">
+      <a class="btn-home" href="../../index.html">🏠 Quay lại Trang chủ</a>
+    </div>
+    <header>
+      <h1>🐳 Động Vật Dưới Nước</h1>
+      <p class="subtitle">Bấm vào từng con vật để nghe phát âm — Bố đọc cùng Đậu câu ngắn ở dưới nhé!</p>
+    </header>
+
+    <div class="controls">
+      <button id="btnExplore" class="btn btn-mode active" onclick="switchMode('explore')">📖 Khám phá từ vựng</button>
+      <button id="btnQuiz" class="btn btn-mode" onclick="switchMode('quiz')">🎯 Trò chơi tìm con vật</button>
+      <button id="btnSpeed" class="btn btn-speed" onclick="toggleSpeed()">🐢 Tốc độ: Chậm cho Đậu</button>
+    </div>
+
+    <div id="explorePanel" class="grid"></div>
+
+    <div id="quizPanel" class="quiz-panel">
+      <div class="score-bar">
+        <span>⭐ Điểm của Đậu: <span id="scoreValue">0</span></span>
+        <span id="streakText">Cố lên nào!</span>
+      </div>
+      <div id="quizPrompt" class="quiz-prompt">Where is the ...?</div>
+      <button class="btn btn-listen" onclick="repeatQuestion()">🔊 Nghe lại câu hỏi</button>
+      <div id="quizOptions" class="quiz-options"></div>
+      <div id="quizFeedback" class="quiz-feedback"></div>
+    </div>
+
+    <div class="tip-footer">
+      💡 <b>Mẹo cho bố:</b> Bấm vào thẻ để nghe tên con vật; bấm vào khung màu xanh ở dưới mỗi thẻ để nghe câu giao tiếp
+      ngắn.
+    </div>
+  </div>
+
+  <script src="../../shared/game.js"></script>
+  <script>
+    initTopicGame([
+      {
+        "en": "Fish",
+        "vi": "Con cá",
+        "emoji": "🐟",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Balantiocheilos_melanopterus_-_Karlsruhe_Zoo_02_%28cropped%29.jpg/500px-Balantiocheilos_melanopterus_-_Karlsruhe_Zoo_02_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The fish swims in water."
+      },
+      {
+        "en": "Whale",
+        "vi": "Cá voi",
+        "emoji": "🐳",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg/500px-Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The whale is huge!"
+      },
+      {
+        "en": "Dolphin",
+        "vi": "Cá heo",
+        "emoji": "🐬",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Tursiops_truncatus_01.jpg/500px-Tursiops_truncatus_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The dolphin is friendly."
+      },
+      {
+        "en": "Shark",
+        "vi": "Cá mập",
+        "emoji": "🦈",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Corl0207_%2828225976491%29.jpg/500px-Corl0207_%2828225976491%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "Look out! It is a shark!"
+      },
+      {
+        "en": "Octopus",
+        "vi": "Bạch tuộc",
+        "emoji": "🐙",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Octopus2.jpg/500px-Octopus2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The octopus has eight arms!"
+      },
+      {
+        "en": "Crab",
+        "vi": "Con cua",
+        "emoji": "🦀",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Cancer_pagurus.jpg/500px-Cancer_pagurus.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The red crab walks sideways."
+      },
+      {
+        "en": "Turtle",
+        "vi": "Con rùa",
+        "emoji": "🐢",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Chelonia_mydas_is_going_for_the_air_edit.jpg/500px-Chelonia_mydas_is_going_for_the_air_edit.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The turtle swims slowly."
+      },
+      {
+        "en": "Frog",
+        "vi": "Con ếch",
+        "emoji": "🐸",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Red-eyed_Leaf_Frog_%2849661076226%29.jpg/500px-Red-eyed_Leaf_Frog_%2849661076226%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The green frog can jump!"
+      },
+      {
+        "en": "Shrimp",
+        "vi": "Con tôm",
+        "emoji": "🦐",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Palaemon_serratus_Croazia.jpg/500px-Palaemon_serratus_Croazia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "It is a little shrimp."
+      },
+      {
+        "en": "Jellyfish",
+        "vi": "Con sứa",
+        "emoji": "🪼",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Jelly_cc11.jpg/500px-Jelly_cc11.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The jellyfish glows in the sea."
+      },
+      {
+        "en": "Starfish",
+        "vi": "Sao biển",
+        "emoji": "⭐",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Starfish_montage.png/500px-Starfish_montage.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The starfish rests on the sand."
+      },
+      {
+        "en": "Seahorse",
+        "vi": "Cá ngựa",
+        "emoji": "🪸",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Hippocampus_hippocampus_%28on_Ascophyllum_nodosum%29.jpg/500px-Hippocampus_hippocampus_%28on_Ascophyllum_nodosum%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The seahorse swims upright."
+      },
+      {
+        "en": "Squid",
+        "vi": "Con mực",
+        "emoji": "🦑",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Sepioteuthis_sepioidea_%28Caribbean_Reef_Squid%29.jpg/500px-Sepioteuthis_sepioidea_%28Caribbean_Reef_Squid%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The squid squirts dark ink."
+      },
+      {
+        "en": "Seal",
+        "vi": "Hải cẩu",
+        "emoji": "🦭",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Common_seal_%28Phoca_vitulina%29_2.jpg/500px-Common_seal_%28Phoca_vitulina%29_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The seal claps its flippers."
+      },
+      {
+        "en": "Otter",
+        "vi": "Rái cá",
+        "emoji": "🦦",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/500px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The otter floats on its back."
+      },
+      {
+        "en": "Lobster",
+        "vi": "Tôm hùm",
+        "emoji": "🦞",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/KreeftbijDenOsse.jpg/500px-KreeftbijDenOsse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The lobster has two big claws."
+      },
+      {
+        "en": "Clam",
+        "vi": "Con sò",
+        "emoji": "🦪",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Haeckel_Acephala.jpg/500px-Haeckel_Acephala.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The clam hides inside its shell."
+      },
+      {
+        "en": "Eel",
+        "vi": "Con lươn",
+        "emoji": "🐍",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/New_Zealand_longfin_eel_%28Anguilla_dieffenbachii%29_Piha.jpg/500px-New_Zealand_longfin_eel_%28Anguilla_dieffenbachii%29_Piha.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The eel looks like a snake."
+      },
+      {
+        "en": "Stingray",
+        "vi": "Cá đuối",
+        "emoji": "🌊",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/SStringray.jpg/500px-SStringray.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The stingray glides like a bird."
+      },
+      {
+        "en": "Goldfish",
+        "vi": "Cá vàng",
+        "emoji": "🐠",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Gold_fish1.jpg/500px-Gold_fish1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The pretty goldfish swims in the bowl."
+      }
+    ]);
+  </script>
+</body>
+
+</html>

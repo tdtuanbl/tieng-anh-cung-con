@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Động Vật Nuôi & Nông Trại</title>
+  <link rel="stylesheet" href="../../shared/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-nav">
+      <a class="btn-home" href="../../index.html">🏠 Quay lại Trang chủ</a>
+    </div>
+    <header>
+      <h1>🏡 Động Vật Nuôi & Nông Trại</h1>
+      <p class="subtitle">Bấm vào từng con vật để nghe phát âm — Bố đọc cùng Đậu câu ngắn ở dưới nhé!</p>
+    </header>
+
+    <div class="controls">
+      <button id="btnExplore" class="btn btn-mode active" onclick="switchMode('explore')">📖 Khám phá từ vựng</button>
+      <button id="btnQuiz" class="btn btn-mode" onclick="switchMode('quiz')">🎯 Trò chơi tìm con vật</button>
+      <button id="btnSpeed" class="btn btn-speed" onclick="toggleSpeed()">🐢 Tốc độ: Chậm cho Đậu</button>
+    </div>
+
+    <div id="explorePanel" class="grid"></div>
+
+    <div id="quizPanel" class="quiz-panel">
+      <div class="score-bar">
+        <span>⭐ Điểm của Đậu: <span id="scoreValue">0</span></span>
+        <span id="streakText">Cố lên nào!</span>
+      </div>
+      <div id="quizPrompt" class="quiz-prompt">Where is the ...?</div>
+      <button class="btn btn-listen" onclick="repeatQuestion()">🔊 Nghe lại câu hỏi</button>
+      <div id="quizOptions" class="quiz-options"></div>
+      <div id="quizFeedback" class="quiz-feedback"></div>
+    </div>
+
+    <div class="tip-footer">
+      💡 <b>Mẹo cho bố:</b> Bấm vào thẻ để nghe tên con vật; bấm vào khung màu xanh ở dưới mỗi thẻ để nghe câu giao tiếp ngắn.
+    </div>
+  </div>
+
+  <script src="../../shared/game.js"></script>
+  <script>
+    initTopicGame([
+  {
+    "en": "Cat",
+    "vi": "Con mèo",
+    "emoji": "🐱",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/500px-Siam_lilacpoint.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "It is a cute cat!"
+  },
+  {
+    "en": "Dog",
+    "vi": "Con chó",
+    "emoji": "🐶",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Huskiesatrest.jpg/500px-Huskiesatrest.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "Look! A happy dog!"
+  },
+  {
+    "en": "Duck",
+    "vi": "Con vịt",
+    "emoji": "🦆",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/500px-Anas_platyrhynchos_male_female_quadrat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The duck says quack!"
+  },
+  {
+    "en": "Cow",
+    "vi": "Con bò",
+    "emoji": "🐮",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/500px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The cow gives us milk."
+  },
+  {
+    "en": "Pig",
+    "vi": "Con lợn",
+    "emoji": "🐷",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Pig_farm_Vampula_1.jpg/500px-Pig_farm_Vampula_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "It is a pink pig!"
+  },
+  {
+    "en": "Chicken",
+    "vi": "Con gà",
+    "emoji": "🐔",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Male_and_female_chicken_sitting_together.jpg/500px-Male_and_female_chicken_sitting_together.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The chicken lays an egg."
+  },
+  {
+    "en": "Sheep",
+    "vi": "Con cừu",
+    "emoji": "🐑",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Flock_of_sheep.jpg/500px-Flock_of_sheep.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The sheep is white and soft."
+  },
+  {
+    "en": "Horse",
+    "vi": "Con ngựa",
+    "emoji": "🐴",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Nokota_Horses_cropped.jpg/500px-Nokota_Horses_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The horse can run fast!"
+  },
+  {
+    "en": "Rabbit",
+    "vi": "Con thỏ",
+    "emoji": "🐰",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Heimtier_004_2023_08_26.jpg/500px-Heimtier_004_2023_08_26.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The rabbit has long ears!"
+  },
+  {
+    "en": "Goat",
+    "vi": "Con dê",
+    "emoji": "🐐",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/500px-Hausziege_04.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The goat likes green grass."
+  },
+  {
+    "en": "Mouse",
+    "vi": "Con chuột",
+    "emoji": "🐭",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Mouse_white_background.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "sentence": "The little mouse likes cheese."
+  },
+  {
+    "en": "Hamster",
+    "vi": "Chuột hamster",
+    "emoji": "🐹",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Golden_hamster_front_1.jpg/500px-Golden_hamster_front_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The hamster has chubby cheeks!"
+  },
+  {
+    "en": "Puppy",
+    "vi": "Chó con",
+    "emoji": "🐶",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/500px-Golde33443.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The puppy is very playful."
+  },
+  {
+    "en": "Kitten",
+    "vi": "Mèo con",
+    "emoji": "🐱",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/500px-Juvenile_Ragdoll.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The kitten drinks warm milk."
+  },
+  {
+    "en": "Rooster",
+    "vi": "Gà trống",
+    "emoji": "🐓",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Rooster_01.jpg/500px-Rooster_01.jpg",
+    "sentence": "The rooster crows cock-a-doodle-doo!"
+  },
+  {
+    "en": "Chick",
+    "vi": "Gà con",
+    "emoji": "🐥",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Day_old_chick.jpg/500px-Day_old_chick.jpg",
+    "sentence": "The yellow chick says peep peep!"
+  },
+  {
+    "en": "Goose",
+    "vi": "Con ngỗng",
+    "emoji": "🪿",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Sunset_Park_-_Las_Vegas_%2811044584144%29.jpg/500px-Sunset_Park_-_Las_Vegas_%2811044584144%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The white goose swims gracefully."
+  },
+  {
+    "en": "Turkey",
+    "vi": "Gà tây",
+    "emoji": "🦃",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/20260428_tom_wild_turkey_matthaei_botanical_gardens_PD08952.jpg/500px-20260428_tom_wild_turkey_matthaei_botanical_gardens_PD08952.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The turkey has big feathers."
+  },
+  {
+    "en": "Donkey",
+    "vi": "Con lừa",
+    "emoji": "🫏",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Donkey_in_Clovelly%2C_North_Devon%2C_England.jpg/500px-Donkey_in_Clovelly%2C_North_Devon%2C_England.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The donkey carries heavy baskets."
+  },
+  {
+    "en": "Water buffalo",
+    "vi": "Con trâu",
+    "emoji": "🐃",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Water_buffalo_at_Rinca.jpg/500px-Water_buffalo_at_Rinca.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "sentence": "The water buffalo loves muddy water."
+  }
+]);
+  </script>
+</body>
+</html>
+

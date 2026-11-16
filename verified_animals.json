@@ -1,0 +1,570 @@
+{
+  "nuoi": [
+    {
+      "en": "Cat",
+      "vi": "Con mèo",
+      "emoji": "🐱",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/500px-Siam_lilacpoint.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "It is a cute cat!"
+    },
+    {
+      "en": "Dog",
+      "vi": "Con chó",
+      "emoji": "🐶",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Huskiesatrest.jpg/500px-Huskiesatrest.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "Look! A happy dog!"
+    },
+    {
+      "en": "Duck",
+      "vi": "Con vịt",
+      "emoji": "🦆",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/500px-Anas_platyrhynchos_male_female_quadrat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The duck says quack!"
+    },
+    {
+      "en": "Cow",
+      "vi": "Con bò",
+      "emoji": "🐮",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/500px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The cow gives us milk."
+    },
+    {
+      "en": "Pig",
+      "vi": "Con lợn",
+      "emoji": "🐷",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Pig_farm_Vampula_1.jpg/500px-Pig_farm_Vampula_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "It is a pink pig!"
+    },
+    {
+      "en": "Chicken",
+      "vi": "Con gà",
+      "emoji": "🐔",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Male_and_female_chicken_sitting_together.jpg/500px-Male_and_female_chicken_sitting_together.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The chicken lays an egg."
+    },
+    {
+      "en": "Sheep",
+      "vi": "Con cừu",
+      "emoji": "🐑",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Flock_of_sheep.jpg/500px-Flock_of_sheep.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The sheep is white and soft."
+    },
+    {
+      "en": "Horse",
+      "vi": "Con ngựa",
+      "emoji": "🐴",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Nokota_Horses_cropped.jpg/500px-Nokota_Horses_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The horse can run fast!"
+    },
+    {
+      "en": "Rabbit",
+      "vi": "Con thỏ",
+      "emoji": "🐰",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Heimtier_004_2023_08_26.jpg/500px-Heimtier_004_2023_08_26.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The rabbit has long ears!"
+    },
+    {
+      "en": "Goat",
+      "vi": "Con dê",
+      "emoji": "🐐",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/500px-Hausziege_04.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The goat likes green grass."
+    },
+    {
+      "en": "Mouse",
+      "vi": "Con chuột",
+      "emoji": "🐭",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Mouse_white_background.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "sentence": "The little mouse likes cheese."
+    },
+    {
+      "en": "Hamster",
+      "vi": "Chuột hamster",
+      "emoji": "🐹",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Golden_hamster_front_1.jpg/500px-Golden_hamster_front_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The hamster has chubby cheeks!"
+    },
+    {
+      "en": "Puppy",
+      "vi": "Chó con",
+      "emoji": "🐶",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/500px-Golde33443.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The puppy is very playful."
+    },
+    {
+      "en": "Kitten",
+      "vi": "Mèo con",
+      "emoji": "🐱",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/500px-Juvenile_Ragdoll.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The kitten drinks warm milk."
+    },
+    {
+      "en": "Rooster",
+      "vi": "Gà trống",
+      "emoji": "🐓",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Rooster_01.jpg/500px-Rooster_01.jpg",
+      "sentence": "The rooster crows cock-a-doodle-doo!"
+    },
+    {
+      "en": "Chick",
+      "vi": "Gà con",
+      "emoji": "🐥",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Day_old_chick.jpg/500px-Day_old_chick.jpg",
+      "sentence": "The yellow chick says peep peep!"
+    },
+    {
+      "en": "Goose",
+      "vi": "Con ngỗng",
+      "emoji": "🪿",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Sunset_Park_-_Las_Vegas_%2811044584144%29.jpg/500px-Sunset_Park_-_Las_Vegas_%2811044584144%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The white goose swims gracefully."
+    },
+    {
+      "en": "Turkey",
+      "vi": "Gà tây",
+      "emoji": "🦃",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/20260428_tom_wild_turkey_matthaei_botanical_gardens_PD08952.jpg/500px-20260428_tom_wild_turkey_matthaei_botanical_gardens_PD08952.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The turkey has big feathers."
+    },
+    {
+      "en": "Donkey",
+      "vi": "Con lừa",
+      "emoji": "🫏",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Donkey_in_Clovelly%2C_North_Devon%2C_England.jpg/500px-Donkey_in_Clovelly%2C_North_Devon%2C_England.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The donkey carries heavy baskets."
+    },
+    {
+      "en": "Water buffalo",
+      "vi": "Con trâu",
+      "emoji": "🐃",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Water_buffalo_at_Rinca.jpg/500px-Water_buffalo_at_Rinca.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The water buffalo loves muddy water."
+    }
+  ],
+  "hoang_da": [
+    {
+      "en": "Lion",
+      "vi": "Sư tử",
+      "emoji": "🦁",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg/500px-020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The lion is very strong!"
+    },
+    {
+      "en": "Tiger",
+      "vi": "Con hổ",
+      "emoji": "🐯",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg/500px-Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The tiger has orange stripes."
+    },
+    {
+      "en": "Elephant",
+      "vi": "Con voi",
+      "emoji": "🐘",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/500px-African_Bush_Elephant.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The elephant is so big!"
+    },
+    {
+      "en": "Monkey",
+      "vi": "Con khỉ",
+      "emoji": "🐒",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Ubud_Monkey_Family.jpg/500px-Ubud_Monkey_Family.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The monkey likes bananas."
+    },
+    {
+      "en": "Giraffe",
+      "vi": "Hươu cao cổ",
+      "emoji": "🦒",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_Mikumi_National_Park.jpg/500px-Giraffe_Mikumi_National_Park.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The giraffe has a long neck!"
+    },
+    {
+      "en": "Zebra",
+      "vi": "Ngựa vằn",
+      "emoji": "🦓",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Plains_Zebra_Equus_quagga_cropped.jpg/500px-Plains_Zebra_Equus_quagga_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The zebra is black and white."
+    },
+    {
+      "en": "Bear",
+      "vi": "Con gấu",
+      "emoji": "🐻",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/500px-2010-kodiak-bear-1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The brown bear likes honey."
+    },
+    {
+      "en": "Fox",
+      "vi": "Con cáo",
+      "emoji": "🦊",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_%28cropped%29.jpg/500px-Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The fox is very clever."
+    },
+    {
+      "en": "Kangaroo",
+      "vi": "Chuột túi",
+      "emoji": "🦘",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Forester_kangaroo_%28Macropus_giganteus_tasmaniensis%29_juvenile_hopping_Esk_Valley.jpg/500px-Forester_kangaroo_%28Macropus_giganteus_tasmaniensis%29_juvenile_hopping_Esk_Valley.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The kangaroo can jump high!"
+    },
+    {
+      "en": "Panda",
+      "vi": "Gấu trúc",
+      "emoji": "🐼",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/500px-Grosser_Panda.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The panda eats bamboo."
+    },
+    {
+      "en": "Crocodile",
+      "vi": "Cá sấu",
+      "emoji": "🐊",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Nile_crocodile_head.jpg/500px-Nile_crocodile_head.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The crocodile has sharp teeth!"
+    },
+    {
+      "en": "Hippo",
+      "vi": "Hà mã",
+      "emoji": "🦛",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Portrait_Hippopotamus_in_the_water.jpg/500px-Portrait_Hippopotamus_in_the_water.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The hippo swims in the river."
+    },
+    {
+      "en": "Rhino",
+      "vi": "Tê giác",
+      "emoji": "🦏",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/081_White_rhinoceros_%28male%29_in_the_Kalahari_Desert_of_Namibia_Photo_by_Giles_Laurent.jpg/500px-081_White_rhinoceros_%28male%29_in_the_Kalahari_Desert_of_Namibia_Photo_by_Giles_Laurent.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The rhino has a big horn."
+    },
+    {
+      "en": "Wolf",
+      "vi": "Chó sói",
+      "emoji": "🐺",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Eurasian_wolf_2.jpg/500px-Eurasian_wolf_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The wolf howls at the moon."
+    },
+    {
+      "en": "Deer",
+      "vi": "Con hươu",
+      "emoji": "🦌",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Cervus_elaphus_Luc_Viatour_6.jpg/500px-Cervus_elaphus_Luc_Viatour_6.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The deer runs quickly."
+    },
+    {
+      "en": "Camel",
+      "vi": "Lạc đà",
+      "emoji": "🐪",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Camelus_dromedarius_in_Nuweiba.jpg/500px-Camelus_dromedarius_in_Nuweiba.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The camel walks in the desert."
+    },
+    {
+      "en": "Snake",
+      "vi": "Con rắn",
+      "emoji": "🐍",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Trimeresurus_sabahi_fucatus%2C_Banded_pit_viper_-_Takua_Pa_District%2C_Phang-nga_Province_%2846710893582%29.jpg/500px-Trimeresurus_sabahi_fucatus%2C_Banded_pit_viper_-_Takua_Pa_District%2C_Phang-nga_Province_%2846710893582%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The green snake slithers quietly."
+    },
+    {
+      "en": "Gorilla",
+      "vi": "Khỉ đột",
+      "emoji": "🦍",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Male_gorilla_in_SF_zoo.jpg/500px-Male_gorilla_in_SF_zoo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The gorilla beats its chest."
+    },
+    {
+      "en": "Koala",
+      "vi": "Gấu túi koala",
+      "emoji": "🐨",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/500px-Koala_climbing_tree.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The cute koala sleeps on the tree."
+    },
+    {
+      "en": "Cheetah",
+      "vi": "Báo đốm",
+      "emoji": "🐆",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Male_cheetah_facing_left_in_South_Africa.jpg/500px-Male_cheetah_facing_left_in_South_Africa.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The cheetah runs super fast!"
+    }
+  ],
+  "duoi_nuoc": [
+    {
+      "en": "Fish",
+      "vi": "Con cá",
+      "emoji": "🐟",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Balantiocheilos_melanopterus_-_Karlsruhe_Zoo_02_%28cropped%29.jpg/500px-Balantiocheilos_melanopterus_-_Karlsruhe_Zoo_02_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The fish swims in water."
+    },
+    {
+      "en": "Whale",
+      "vi": "Cá voi",
+      "emoji": "🐳",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg/500px-Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The whale is huge!"
+    },
+    {
+      "en": "Dolphin",
+      "vi": "Cá heo",
+      "emoji": "🐬",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Tursiops_truncatus_01.jpg/500px-Tursiops_truncatus_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The dolphin is friendly."
+    },
+    {
+      "en": "Shark",
+      "vi": "Cá mập",
+      "emoji": "🦈",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Corl0207_%2828225976491%29.jpg/500px-Corl0207_%2828225976491%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "Look out! It is a shark!"
+    },
+    {
+      "en": "Octopus",
+      "vi": "Bạch tuộc",
+      "emoji": "🐙",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Octopus2.jpg/500px-Octopus2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The octopus has eight arms!"
+    },
+    {
+      "en": "Crab",
+      "vi": "Con cua",
+      "emoji": "🦀",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Cancer_pagurus.jpg/500px-Cancer_pagurus.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The red crab walks sideways."
+    },
+    {
+      "en": "Turtle",
+      "vi": "Con rùa",
+      "emoji": "🐢",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Chelonia_mydas_is_going_for_the_air_edit.jpg/500px-Chelonia_mydas_is_going_for_the_air_edit.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The turtle swims slowly."
+    },
+    {
+      "en": "Frog",
+      "vi": "Con ếch",
+      "emoji": "🐸",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Red-eyed_Leaf_Frog_%2849661076226%29.jpg/500px-Red-eyed_Leaf_Frog_%2849661076226%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The green frog can jump!"
+    },
+    {
+      "en": "Shrimp",
+      "vi": "Con tôm",
+      "emoji": "🦐",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Palaemon_serratus_Croazia.jpg/500px-Palaemon_serratus_Croazia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "It is a little shrimp."
+    },
+    {
+      "en": "Jellyfish",
+      "vi": "Con sứa",
+      "emoji": "🪼",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Jelly_cc11.jpg/500px-Jelly_cc11.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The jellyfish glows in the sea."
+    },
+    {
+      "en": "Starfish",
+      "vi": "Sao biển",
+      "emoji": "⭐",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Starfish_montage.png/500px-Starfish_montage.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The starfish rests on the sand."
+    },
+    {
+      "en": "Seahorse",
+      "vi": "Cá ngựa",
+      "emoji": "🪸",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Hippocampus_hippocampus_%28on_Ascophyllum_nodosum%29.jpg/500px-Hippocampus_hippocampus_%28on_Ascophyllum_nodosum%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The seahorse swims upright."
+    },
+    {
+      "en": "Squid",
+      "vi": "Con mực",
+      "emoji": "🦑",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Sepioteuthis_sepioidea_%28Caribbean_Reef_Squid%29.jpg/500px-Sepioteuthis_sepioidea_%28Caribbean_Reef_Squid%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The squid squirts dark ink."
+    },
+    {
+      "en": "Seal",
+      "vi": "Hải cẩu",
+      "emoji": "🦭",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Common_seal_%28Phoca_vitulina%29_2.jpg/500px-Common_seal_%28Phoca_vitulina%29_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The seal claps its flippers."
+    },
+    {
+      "en": "Otter",
+      "vi": "Rái cá",
+      "emoji": "🦦",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/500px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The otter floats on its back."
+    },
+    {
+      "en": "Lobster",
+      "vi": "Tôm hùm",
+      "emoji": "🦞",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/KreeftbijDenOsse.jpg/500px-KreeftbijDenOsse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The lobster has two big claws."
+    },
+    {
+      "en": "Clam",
+      "vi": "Con sò",
+      "emoji": "🦪",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Haeckel_Acephala.jpg/500px-Haeckel_Acephala.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The clam hides inside its shell."
+    },
+    {
+      "en": "Eel",
+      "vi": "Con lươn",
+      "emoji": "🐍",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/New_Zealand_longfin_eel_%28Anguilla_dieffenbachii%29_Piha.jpg/500px-New_Zealand_longfin_eel_%28Anguilla_dieffenbachii%29_Piha.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The eel looks like a snake."
+    },
+    {
+      "en": "Stingray",
+      "vi": "Cá đuối",
+      "emoji": "🌊",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/SStringray.jpg/500px-SStringray.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The stingray glides like a bird."
+    },
+    {
+      "en": "Goldfish",
+      "vi": "Cá vàng",
+      "emoji": "🐠",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Gold_fish1.jpg/500px-Gold_fish1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The pretty goldfish swims in the bowl."
+    }
+  ],
+  "chim_con_trung": [
+    {
+      "en": "Bird",
+      "vi": "Con chim",
+      "emoji": "🐦",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Kleiber_Flug.jpg/500px-Kleiber_Flug.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The bird can fly high!"
+    },
+    {
+      "en": "Owl",
+      "vi": "Chim cú",
+      "emoji": "🦉",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg/500px-American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The owl wakes up at night."
+    },
+    {
+      "en": "Eagle",
+      "vi": "Đại bàng",
+      "emoji": "🦅",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg/500px-Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The eagle flies in the sky."
+    },
+    {
+      "en": "Parrot",
+      "vi": "Con vẹt",
+      "emoji": "🦜",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Rainbow_lorikeet_%28Trichoglossus_moluccanus_moluccanus%29_Sydney.jpg/500px-Rainbow_lorikeet_%28Trichoglossus_moluccanus_moluccanus%29_Sydney.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The colorful parrot can talk!"
+    },
+    {
+      "en": "Penguin",
+      "vi": "Chim cánh cụt",
+      "emoji": "🐧",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg/500px-Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The penguin loves cold snow!"
+    },
+    {
+      "en": "Butterfly",
+      "vi": "Con bướm",
+      "emoji": "🦋",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Monarch_Butterfly_Danaus_plexippus_Male_2664px.jpg/500px-Monarch_Butterfly_Danaus_plexippus_Male_2664px.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "What a pretty butterfly!"
+    },
+    {
+      "en": "Bee",
+      "vi": "Con ong",
+      "emoji": "🐝",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Apis_mellifera_Western_honey_bee.jpg/500px-Apis_mellifera_Western_honey_bee.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The busy bee makes honey."
+    },
+    {
+      "en": "Ant",
+      "vi": "Con kiến",
+      "emoji": "🐜",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Red_Ant_-_March_2025.jpg/500px-Red_Ant_-_March_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The little ant works hard."
+    },
+    {
+      "en": "Ladybug",
+      "vi": "Bọ rùa",
+      "emoji": "🐞",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Coccinella-septempunctata-15-fws.jpg/500px-Coccinella-septempunctata-15-fws.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The ladybug has black spots."
+    },
+    {
+      "en": "Spider",
+      "vi": "Con nhện",
+      "emoji": "🕷️",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Araneus_diadematus_%28Clerck%2C_1757%29.JPG/500px-Araneus_diadematus_%28Clerck%2C_1757%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The spider makes a web."
+    },
+    {
+      "en": "Swan",
+      "vi": "Thiên nga",
+      "emoji": "🦢",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/CygneVaires.jpg/500px-CygneVaires.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The graceful swan glides on the lake."
+    },
+    {
+      "en": "Flamingo",
+      "vi": "Hồng hạc",
+      "emoji": "🦩",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Flamingos_Laguna_Colorada.jpg/500px-Flamingos_Laguna_Colorada.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The pink flamingo stands on one leg!"
+    },
+    {
+      "en": "Peacock",
+      "vi": "Con công",
+      "emoji": "🦚",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Peacock_Plumage.jpg/500px-Peacock_Plumage.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The peacock shows its colorful tail."
+    },
+    {
+      "en": "Pigeon",
+      "vi": "Bồ câu",
+      "emoji": "🕊️",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg/500px-Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The pigeon brings peace."
+    },
+    {
+      "en": "Dragonfly",
+      "vi": "Chuồn chuồn",
+      "emoji": "🪰",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Red_grasshawk_%28Neurothemis_fluctuans%29_male_Phuket_2.jpg/500px-Red_grasshawk_%28Neurothemis_fluctuans%29_male_Phuket_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The dragonfly hovers over flowers."
+    },
+    {
+      "en": "Caterpillar",
+      "vi": "Sâu bướm",
+      "emoji": "🐛",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Chenille_de_Grand_porte_queue_%28macaon%29.jpg/500px-Chenille_de_Grand_porte_queue_%28macaon%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The hungry caterpillar crawls slowly."
+    },
+    {
+      "en": "Snail",
+      "vi": "Ốc sên",
+      "emoji": "🐌",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Snail1web.jpg/500px-Snail1web.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The snail carries its house."
+    },
+    {
+      "en": "Mosquito",
+      "vi": "Con muỗi",
+      "emoji": "🦟",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Aedes_aegypti.jpg/500px-Aedes_aegypti.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "Shoo! The mosquito is buzzing."
+    },
+    {
+      "en": "Grasshopper",
+      "vi": "Châu chấu",
+      "emoji": "🦗",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/American_Bird_Grasshopper.jpg/500px-American_Bird_Grasshopper.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The green grasshopper jumps high."
+    },
+    {
+      "en": "Beetle",
+      "vi": "Bọ hung",
+      "emoji": "🪲",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Coleoptera_collage.png/500px-Coleoptera_collage.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "sentence": "The shiny beetle climbs on leaves."
+    }
+  ]
+}

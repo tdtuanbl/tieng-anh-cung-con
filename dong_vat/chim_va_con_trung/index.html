@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chim & Côn Trùng</title>
+  <link rel="stylesheet" href="../../shared/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="top-nav">
+      <a class="btn-home" href="../../index.html">🏠 Quay lại Trang chủ</a>
+    </div>
+    <header>
+      <h1>🦋 Chim & Côn Trùng</h1>
+      <p class="subtitle">Bấm vào từng con vật để nghe phát âm — Bố đọc cùng Đậu câu ngắn ở dưới nhé!</p>
+    </header>
+
+    <div class="controls">
+      <button id="btnExplore" class="btn btn-mode active" onclick="switchMode('explore')">📖 Khám phá từ vựng</button>
+      <button id="btnQuiz" class="btn btn-mode" onclick="switchMode('quiz')">🎯 Trò chơi tìm con vật</button>
+      <button id="btnSpeed" class="btn btn-speed" onclick="toggleSpeed()">🐢 Tốc độ: Chậm cho Đậu</button>
+    </div>
+
+    <div id="explorePanel" class="grid"></div>
+
+    <div id="quizPanel" class="quiz-panel">
+      <div class="score-bar">
+        <span>⭐ Điểm của Đậu: <span id="scoreValue">0</span></span>
+        <span id="streakText">Cố lên nào!</span>
+      </div>
+      <div id="quizPrompt" class="quiz-prompt">Where is the ...?</div>
+      <button class="btn btn-listen" onclick="repeatQuestion()">🔊 Nghe lại câu hỏi</button>
+      <div id="quizOptions" class="quiz-options"></div>
+      <div id="quizFeedback" class="quiz-feedback"></div>
+    </div>
+
+    <div class="tip-footer">
+      💡 <b>Mẹo cho bố:</b> Bấm vào thẻ để nghe tên con vật; bấm vào khung màu xanh ở dưới mỗi thẻ để nghe câu giao tiếp
+      ngắn.
+    </div>
+  </div>
+
+  <script src="../../shared/game.js"></script>
+  <script>
+    initTopicGame([
+      {
+        "en": "Bird",
+        "vi": "Con chim",
+        "emoji": "🐦",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Kleiber_Flug.jpg/500px-Kleiber_Flug.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The bird can fly high!"
+      },
+      {
+        "en": "Owl",
+        "vi": "Chim cú",
+        "emoji": "🦉",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg/500px-American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The owl wakes up at night."
+      },
+      {
+        "en": "Eagle",
+        "vi": "Đại bàng",
+        "emoji": "🦅",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg/500px-Bald_eagle_about_to_fly_in_Alaska_%282016%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The eagle flies in the sky."
+      },
+      {
+        "en": "Parrot",
+        "vi": "Con vẹt",
+        "emoji": "🦜",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Rainbow_lorikeet_%28Trichoglossus_moluccanus_moluccanus%29_Sydney.jpg/500px-Rainbow_lorikeet_%28Trichoglossus_moluccanus_moluccanus%29_Sydney.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The colorful parrot can talk!"
+      },
+      {
+        "en": "Penguin",
+        "vi": "Chim cánh cụt",
+        "emoji": "🐧",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg/500px-Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The penguin loves cold snow!"
+      },
+      {
+        "en": "Butterfly",
+        "vi": "Con bướm",
+        "emoji": "🦋",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Monarch_Butterfly_Danaus_plexippus_Male_2664px.jpg/500px-Monarch_Butterfly_Danaus_plexippus_Male_2664px.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "What a pretty butterfly!"
+      },
+      {
+        "en": "Bee",
+        "vi": "Con ong",
+        "emoji": "🐝",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Apis_mellifera_Western_honey_bee.jpg/500px-Apis_mellifera_Western_honey_bee.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The busy bee makes honey."
+      },
+      {
+        "en": "Ant",
+        "vi": "Con kiến",
+        "emoji": "🐜",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Red_Ant_-_March_2025.jpg/500px-Red_Ant_-_March_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The little ant works hard."
+      },
+      {
+        "en": "Ladybug",
+        "vi": "Bọ rùa",
+        "emoji": "🐞",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Coccinella-septempunctata-15-fws.jpg/500px-Coccinella-septempunctata-15-fws.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The ladybug has black spots."
+      },
+      {
+        "en": "Spider",
+        "vi": "Con nhện",
+        "emoji": "🕷️",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Araneus_diadematus_%28Clerck%2C_1757%29.JPG/500px-Araneus_diadematus_%28Clerck%2C_1757%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The spider makes a web."
+      },
+      {
+        "en": "Swan",
+        "vi": "Thiên nga",
+        "emoji": "🦢",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/CygneVaires.jpg/500px-CygneVaires.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The graceful swan glides on the lake."
+      },
+      {
+        "en": "Flamingo",
+        "vi": "Hồng hạc",
+        "emoji": "🦩",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Flamingos_Laguna_Colorada.jpg/500px-Flamingos_Laguna_Colorada.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The pink flamingo stands on one leg!"
+      },
+      {
+        "en": "Peacock",
+        "vi": "Con công",
+        "emoji": "🦚",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Peacock_Plumage.jpg/500px-Peacock_Plumage.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The peacock shows its colorful tail."
+      },
+      {
+        "en": "Pigeon",
+        "vi": "Bồ câu",
+        "emoji": "🕊️",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg/500px-Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The pigeon brings peace."
+      },
+      {
+        "en": "Dragonfly",
+        "vi": "Chuồn chuồn",
+        "emoji": "🪰",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Red_grasshawk_%28Neurothemis_fluctuans%29_male_Phuket_2.jpg/500px-Red_grasshawk_%28Neurothemis_fluctuans%29_male_Phuket_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The dragonfly hovers over flowers."
+      },
+      {
+        "en": "Caterpillar",
+        "vi": "Sâu bướm",
+        "emoji": "🐛",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Chenille_de_Grand_porte_queue_%28macaon%29.jpg/500px-Chenille_de_Grand_porte_queue_%28macaon%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The hungry caterpillar crawls slowly."
+      },
+      {
+        "en": "Snail",
+        "vi": "Ốc sên",
+        "emoji": "🐌",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Snail1web.jpg/500px-Snail1web.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The snail carries its house."
+      },
+      {
+        "en": "Mosquito",
+        "vi": "Con muỗi",
+        "emoji": "🦟",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Aedes_aegypti.jpg/500px-Aedes_aegypti.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "Shoo! The mosquito is buzzing."
+      },
+      {
+        "en": "Grasshopper",
+        "vi": "Châu chấu",
+        "emoji": "🦗",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/American_Bird_Grasshopper.jpg/500px-American_Bird_Grasshopper.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The green grasshopper jumps high."
+      },
+      {
+        "en": "Beetle",
+        "vi": "Bọ hung",
+        "emoji": "🪲",
+        "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Coleoptera_collage.png/500px-Coleoptera_collage.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "sentence": "The shiny beetle climbs on leaves."
+      }
+    ]);
+  </script>
+</body>
+
+</html>
